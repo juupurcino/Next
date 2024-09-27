@@ -3,8 +3,8 @@ import localFont from "next/font/local";
 import { Roboto } from "next/font/google";
 
 import "./globals.css";
-import { Menu } from "./components/menu";
-import { Footer } from "./components/footer";
+import { Menu } from "../components/menu";
+import { Footer } from "../components/footer";
 
 const roboto = Roboto({
 
