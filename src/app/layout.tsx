@@ -32,7 +32,7 @@ export default function RootLayout({ children, }: Readonly <{children: React.Rea
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} antialiased` }>
         
-        <Menu op1="ju" op3={false} op2={2}/>
+        <Menu op1="Home 🏡" op3="Calculator 🧮" op2="General function"/>
         {children}
       </body>
     </html>
