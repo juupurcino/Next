@@ -36,8 +36,8 @@ const GeneralFunction: React.FC = () => {
 
     return(
         <>
-        
-            <h1>Funçao reaproveitada</h1>
+
+            <div className="bg-teal-300 w-2/3">
             <div>
                 <input type="text" placeholder="Número 01" value={numero1} onChange={(e) => setNumero1(e.target.value)}/>                
             </div>
@@ -64,6 +64,7 @@ const GeneralFunction: React.FC = () => {
                     <h2>Divisão</h2>
                     <p>{!isNaN(respDiv ?? NaN) ? respDiv?.toFixed(1) : erro}</p>
                 </div>
+            </div>
             </div>
 
         </>

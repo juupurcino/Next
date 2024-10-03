@@ -18,7 +18,8 @@ const config: Config = {
         small: "16px"
       },
       fontFamily: {
-        robFont : "var(--roboto)"
+        robFont : "var(--roboto)",
+        codeFont : "var(--code)"
       },
       screens: {
         "2lg": "1920px"
