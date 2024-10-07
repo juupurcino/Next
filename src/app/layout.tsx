@@ -43,7 +43,7 @@ export default function RootLayout({ children, }: Readonly <{children: React.Rea
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} ${code.variable} antialiased` }>
         
-        <Menu op1="🏡Home" op2="Calculator"/>
+        <Menu op1="🏡Home" op2="Calculator" op3="Fetch Page" op4="Axios page" op5="Server-side page"/>
         {children}
       </body>
     </html>

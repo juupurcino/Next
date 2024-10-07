@@ -2,9 +2,9 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 //Imagens
-import rosa from "../../public/img/rosa.jpg";
-import laranja from "../../public/img/laranja.jpg";
-import verde from "../../public/img/verde.jpg";
+import rosa from "@/assets/rosa.jpg";
+import laranja from "@/assets/laranja.jpg";
+import verde from "@/assets/verde.jpg";
 
 export const Card = ({cor, imagem, titulo, texto, subtitulo, cor_texto} : {
     cor : string;

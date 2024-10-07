@@ -1,5 +1,7 @@
 export enum ROUTES {
     home ="/",
     maths = "/maths",
-    generalFunction = "/funcao-reaproveitada"
+    fetchPage = "/pagina-fetch-page",
+    axiosPage = "/pagina-axios-page",
+    serverPage = "/pagina-server-side"
 }
