@@ -12,7 +12,7 @@ type IData = {
 }
 
 const ServerSide = async () => {
-    const res = await fetch("https://rickandmortyapi.com/api/character")
+    const res = await fetch("https://gravity-falls-api.vercel.app/api/characters")
     const data : IData = await res.json()
     console.log(data);
 

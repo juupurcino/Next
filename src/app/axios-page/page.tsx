@@ -9,10 +9,8 @@ import { api } from "@/constants/api";
 
 interface IData {
     name: string, 
-    gender: string,
-    status: string,
-    species: string,
-    image: string
+    imageUrl: string,,0
+
 }
 
 const axiosPage = () => {
@@ -23,9 +21,9 @@ const axiosPage = () => {
     const [page, setpage] = useState<string>("")
 
     useEffect(() => {
-        api.get(`/character?page=${page}`).then((res) => {
+        api.get(`/character?name=${page}`).then((res) => {
             setErro(false);
-            setData(res.data.results);
+            setData(res.data.data);
         }).catch((error) =>{
             if(error.response.status === 404){
                 setErrorMessage("Página não encontrada! ");
@@ -44,10 +42,7 @@ const axiosPage = () => {
                     return(
                         <div key={i}>
                             <h2>{item.name}</h2>
-                            <Image src={item.image} width={200} height={200} alt="sla"/>
-                            <p>{item.gender}</p>
-                            <p>{item.species}</p>
-                            <p>{item.status}</p>
+                            <img src={item.imageUrl} width={200} height={200} alt="sla"/>
                         </div>
                     )
                 })}

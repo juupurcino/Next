@@ -13,19 +13,20 @@ import { api } from "@/constants/api";
 interface IData {
 
     name: string,
-    image: string,
+    imageUrl: string,
     id: string
 }
 
 const FetchPage = () => {
 
     const [characters, setcharacters] = useState<IData[]>([])
+    const [page, setpage] = useState<string>("")
 
     useEffect(() => {
       const load = async () => {
-        const res = await fetch("https://rickandmortyapi.com/api/character");
+        const res = await fetch("https://api.disneyapi.dev/character");
         const data = await res.json();
-        setcharacters(data.results);
+        setcharacters(data.data);
         console.log(data);
       }
     
@@ -37,11 +38,12 @@ const FetchPage = () => {
 
         <>
             <h1>Fetch nativo para resquisições get</h1>
+            <input type="text" value={page} placeholder="Digite aqui" onChange={(e) => setpage(e.target.value)} />
             <div>
                 {characters.map((item) => {
                     return (
                         <div key={item.id}>
-                            <Image src={item.image} alt="sla" width={200} height={200}/>
+                            <img src={item.imageUrl} alt="sla" width={200} height={200}/>
                             <h2>{item.name}</h2>
                         </div>
                     )
